@@ -1,5 +1,4 @@
 import random
-import sys
 
 def getName():
     while True:
@@ -55,7 +54,7 @@ def menu():
         case 2:
             NumGuessVal()
         case 3:
-            quit()
+            quit_file()
     
 
 
@@ -64,10 +63,10 @@ def menu():
 #NumGuessVal()   #Get's a random number and the user has to guess it (Project #2)
 while True:
     menu()
-    end = input("Do you want it to end (y or n)? ")
+    end = input("Do you want it to continue (y or n)? ")
     if end == "y":
-        break
-    elif end == "n":
         continue
+    elif end == "n":
+        break
     else:
         print("Bad input, going around again!!!")
