@@ -32,7 +32,7 @@ def NumGuessVal():
             print("Needs to be a little bit higher. ")
             continue
 
-def menu_print():
+def menu_print():       #Prints the menu for the user to choose where they want to go
     print(" ")
     print("1. Get name")
     print(" ")
