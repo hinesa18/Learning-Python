@@ -1,4 +1,5 @@
 import random
+import sys
 
 def getName():
     while True:
@@ -17,7 +18,7 @@ def NumGuessVal():
     #else:                       #If anything else it will convert the string to an integer so it can be used a number
         #randomNumRange = randomNumRange.strip   #Something wrong with this line
         #randomNumRange = int(randomNumRange)    #Something wrong with this line
-    randomNum = random.randrange(100)   #Gets a random problem between the number 1 and 100 and lets the user guess it(Fill with randomNumRange when fixed)
+    randomNum = random.randrange(101)   #Gets a random problem between the number 1 and 100 and lets the user guess it(Fill with randomNumRange when fixed)
     #print(randomNum)    #Prints the random number just to make sure it was working properly
     while True:
         guess = int(input("What is your guess? "))
@@ -38,8 +39,13 @@ def menu_print():       #Prints the menu for the user to choose where they want 
     print(" ")
     print("2. Number guesser")
     print(" ")
-    print("3. Menu")
+    print("3. Quit")
     print(" ")
+
+def quit_file():
+    quit()
+    
+
 def menu():
     menu_print()
     choice = int(input("Which would you like to choose? "))
@@ -49,7 +55,7 @@ def menu():
         case 2:
             NumGuessVal()
         case 3:
-            menu()
+            quit()
     
 
 
