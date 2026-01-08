@@ -1,4 +1,5 @@
 import random
+import time
 
 def getName():
     while True:
@@ -40,9 +41,47 @@ def menu_print():       #Prints the menu for the user to choose where they want 
     print(" ")
     print("3. Quit")
     print(" ")
+    print("4. Animal name")
+    print(" ")
+    print("5. Password checker")
+    print(" ")
+    print("6. Dice Game")
+    print(" ")
 
 def quit_file():
     quit()
+
+def password_strength_checker():
+    if len(input("What is your password? ")) >= 8: 
+        print("This is a good password! ")
+    else:
+        print("This is not a strong password! ")
+
+def dice_game():
+    while True:     
+        print("Computer Roll Is... ")
+        time.sleep(2)
+        cpu_guess = random.randrange(6) + 1
+        print (cpu_guess)
+        wait = input("Press enter to roll the dice... ")
+        print("Your Roll Is... ")
+        time.sleep(2)
+        player_guess = random.randrange(6) + 1
+        print(player_guess)
+        if player_guess > cpu_guess:
+            time.sleep(2)
+            print("You Win!!!")
+            break
+        elif cpu_guess > player_guess:
+            time.sleep(2)
+            print("You Lose...")
+            break
+        elif player_guess == cpu_guess:
+            time.sleep(2)
+            print("It's a tie, go again")
+            continue
+
+
     
 
 def menu():
@@ -55,8 +94,22 @@ def menu():
             NumGuessVal()
         case 3:
             quit()
-    
+        case 4:
+            animal()
+        case 5:
+            password_strength_checker()
+        case 6:
+            dice_game()
 
+def animal_list():
+    Sloth = "Sloth"
+
+def animal():
+    Sloth_name = "Sloth"
+    print ("The name of the sloth is: " + Sloth_name)
+
+    Sloth_name = input("What do you want to name the sloth? ")
+    print("The name of the Sloth is now: " + Sloth_name)
 
 
 #getName()  #Calls the fuction to get user's name (Project #1)
@@ -70,3 +123,5 @@ while True:
         continue
     else:
         print("Bad input, going around again!!!")
+
+
